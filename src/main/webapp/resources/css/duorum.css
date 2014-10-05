@@ -1,0 +1,12 @@
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.table > tbody > tr.danger > td a.btn, .table > tbody > tr.warning > td a.btn {
+    color: #FFFFFF;
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <!-- only content -->
+    <definition name="c-*-*" template="/WEB-INF/view/template.jsp">
+        <put-attribute name="content" value="/WEB-INF/view/{2}/{1}.jsp"/>
+    </definition>
+
+    <!-- content + javascript modules -->
+    <definition name="cm-*-*-*" template="/WEB-INF/view/template.jsp">
+        <put-attribute name="content" value="/WEB-INF/view/{2}/{1}.jsp"/>
+        <put-attribute name="modules" value="{3}"/>
+    </definition>
+
+    <!-- content + menu-from -->
+    <definition name="mfc-*-*" template="/WEB-INF/view/template.jsp">
+        <put-attribute name="menu-form" value="/WEB-INF/view/{2}/{1}_form.jsp"/>
+        <put-attribute name="content" value="/WEB-INF/view/{2}/{1}.jsp"/>
+    </definition>
+
+    <!-- content + additional-scripts -->
+    <definition name="asc-*-*" template="/WEB-INF/view/template.jsp">
+        <put-attribute name="content" value="/WEB-INF/view/{2}/{1}.jsp"/>
+        <put-attribute name="additional-scripts" value="/WEB-INF/view/{2}/{1}_scripts.jsp"/>
+    </definition>
+
+</tiles-definitions>
